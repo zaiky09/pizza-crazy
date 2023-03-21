@@ -1,6 +1,8 @@
 class RestaurantsController < ApplicationController
 
-    # List all reataurants
+rescue_from ActiveRecord::RecordNotFound, with: :rende_not_found_response
+
+    # List all restaurants
     def index
         restaurants = Restaurant.all
         render json: restaurants, status: :ok
@@ -8,30 +10,25 @@ class RestaurantsController < ApplicationController
 
     # List one specific restaurant
     def show
-        restaurant = Restaurant.find_by(id: params[:id])
-        if restaurant
-            render json: restaurant, status: :ok
-        else
-            render json: {error: "Restaurant not found"}, status: :not_found
-        end
+        restaurant = find_restaurant
+        render json: restaurant, include: :pizzas
     end
 
     # Delete one specific restaurant
     def destroy
-        restaurant = Restaurant.find_by(id: params[:id])
-        if restaurant
-            restaurant.destroy
-            head :no_content
-            # render json: {message: "Restaurant deleted successfully"}
-        else
-            render json: {error: "No such restaurant"}, status: :not_found
-        end
+        restaurant = find_restuarant
+        restaurant.destroy
+        head :no_content
     end
 
     private
 
-    def restaurant_params
-        params.permit(:name, :address)
+    def render_not_found_response
+        render json: {error: "No such restaurant"}, status: :not_found
+    end
+
+    def find_restaurant
+        Restaurant.find(params[:id])
     end
 
 end

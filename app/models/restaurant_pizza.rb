@@ -8,7 +8,7 @@ class RestaurantPizza < ApplicationRecord
 
     def price_range
         if price.nil? || price <= 0 || price >= 30
-            errors.add(:price, "Price not in the correct range")
+            errors.add(:price, "not in the correct range")
         end
     end
      

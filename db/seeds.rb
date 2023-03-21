@@ -17,7 +17,7 @@ end
 
 #Pizza and price at reataurant
     Pizza.all.sample(10).each do |pizza_dish|
-        rpizza = RestaurantPizza.create(
+        restaurant_pizza = RestaurantPizza.create(
             price: rand(1..30),
             pizza_id: pizza_dish.id,
             restaurant_id: restaurant.id
