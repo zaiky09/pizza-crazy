@@ -70,8 +70,8 @@ You can setup this repository by following this manual
                         make sure to include in the header section of your request:
 
                                             Content-Type: application/json
-                                            
-Copy the link http://127.0.0.1:3000
+
+Copy the link http://127.0.0.1:3000 & paste it in required section on postman
 run the deliverables in the routes section by adding the required paths
 
 ### Project deliverables    
