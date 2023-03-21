@@ -22,6 +22,7 @@ class RestaurantsController < ApplicationController
         if restaurant
             restaurant.destroy
             head :no_content
+            # render json: {message: "Restaurant deleted successfully"}
         else
             render json: {error: "No such restaurant"}, status: :not_found
         end
