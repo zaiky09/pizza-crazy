@@ -7,6 +7,7 @@ class RestaurantPizzasController < ApplicationController
             render json: rpizza, status: :created
         else
             render json: {error: "validation errors"}
+        end
     end
 
     private
