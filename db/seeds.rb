@@ -1,5 +1,3 @@
-require 'Faker' from '../Gemfile';
-
 puts '🍕 Seeding pizza crazy...'
 
 #Veg pizza
