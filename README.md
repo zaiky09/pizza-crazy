@@ -21,6 +21,8 @@ ruby "3.0.2"
 
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 
+gem 'faker'
+
 gem "sprockets-rails"
 
 gem "sqlite3", "~> 1.4"
@@ -41,9 +43,6 @@ end
 
 group :development do
   gem "web-console"
-
-  #faker
-  gem 'faker'
 end
 
 group :test do
