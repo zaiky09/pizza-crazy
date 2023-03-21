@@ -4,6 +4,10 @@
 
 Pizza-crazy is a basic API.
 
+#### link deployed using render
+
+     https://pizza-crazy.onrender.com
+
 The application has been built with the MVC design pattern.
 
 ## Pre-Requisites
@@ -62,8 +66,8 @@ You can setup this repository by following this manual
     rake db:migrate db:seed
 #### Start the server
     rails s
-
-#### Open postman using 
+### Alterante method to access backend
+##### Open postman using 
                         : https://web.postman.co/workspace/My-Workspace~b779a210-dd50-4577-8e7f-6c36948203ef/request/create?requestId=a231f6da-3e8b-4e75-976b-39999244380d
 
                         make sure to include in the header section of your request:
