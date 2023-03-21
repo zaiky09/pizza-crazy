@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
         render json: restaurants, status: :ok
     end
 
-    # List one specif restaurant
+    # List one specific restaurant
     def show
         restaurant = Restaurant.find_by(id: params[:id])
         if restaurant
