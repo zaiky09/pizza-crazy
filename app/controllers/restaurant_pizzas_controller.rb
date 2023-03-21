@@ -2,9 +2,9 @@ class RestaurantPizzasController < ApplicationController
 
     # Create 
     def create
-        rpizza = RestaurantPizza.create(rpizza_params)
-        if rpizza
-            render json: rpizza, status: :created
+        restaurant_pizza = RestaurantPizza.create(restaurant_pizza_params)
+        if restaurant_pizza
+            render json: restaurant_pizza, status: :created
         else
             render json: {error: "validation errors"}
         end
@@ -12,7 +12,7 @@ class RestaurantPizzasController < ApplicationController
 
     private
 
-    def rpizza_params
+    def restaurant_pizza_params
         params.permit(:price, :pizza_id, :restaurant_id)
     end
 end
