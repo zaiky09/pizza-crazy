@@ -61,8 +61,18 @@ You can setup this repository by following this manual
     bundle install
 #### Perform any pending database migrations
     rake db:migrate db:seed
-#### Run the application
+#### Start the server
     rails s
+
+#### Open postman using 
+                        : https://web.postman.co/workspace/My-Workspace~b779a210-dd50-4577-8e7f-6c36948203ef/request/create?requestId=a231f6da-3e8b-4e75-976b-39999244380d
+
+                        make sure to include in the header section of your request:
+
+                                            Content-Type: application/json
+                                            
+Copy the link http://127.0.0.1:3000
+run the deliverables in the routes section by adding the required paths
 
 ### Project deliverables    
 Project conforms to the following set of guidelines:
